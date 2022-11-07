@@ -1,6 +1,6 @@
 # ProsCons株式会社　提出課題  
 ## python -V  
-Python 3.9.10（M1 Macの最新のOSで対応しているためバージョン変えました。）  
+Python 3.9.10（Python 3.6.8がM1 Macの最新のOSで対応していなかったためバージョン変えました。）  
 
 ## venvで仮想環境を作成  
 $ python3 -m venv .venv  

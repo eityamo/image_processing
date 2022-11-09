@@ -3,8 +3,8 @@ import numpy as np
 
 # ①「milkdrop.bmp」を読み込み、cv2.imshow()を用いて表示
 img_raw = cv2.imread('milkdrop.bmp')
-cv2.imshow('ImgRaw', img_raw)
-cv2.waitKey(0)
+# cv2.imshow('ImgRaw', img_raw)
+# cv2.waitKey(0)
 
 # ②白色領域(ミルククラウン)とそれ以外の2値画像を作成
 ## 画像の読み込み
@@ -20,12 +20,14 @@ contours = cv2.findContours(img_thresh, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMP
 ## 面積が最大の輪郭を取得
 contour = max(contours, key=lambda x: cv2.contourArea(x))
 ## 輪郭の描画
-cv2.drawContours(img_raw, contours, -1, color=(255, 255, 255), thickness=2)
+# cv2.drawContours(img_raw, contours, -1, color=(255, 255, 255), thickness=2)
 
 # ④抽出した領域を用いて、ミルククラウン領域とそれ以外を分けたmask画像を作成
 ## マスク画像の作成
 img_mask = np.zeros_like(img_thresh)
 img_and = cv2.drawContours(img_mask, [contour], -1, color=255, thickness=-1)
+cv2.imshow('ImgAnd', img_and)
+cv2.waitKey(0)
 
 # ⑤ミルククラウン領域のみを、cv2.imshow()を用いて表示
 ## 画像の合成

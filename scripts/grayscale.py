@@ -10,11 +10,6 @@ print(img_gray.shape)
 print(img_hsv.shape)
 # => (640, 960, 3)
 
-# cv2.imshow("img", img)
-# cv2.imshow("gray", img_gray)
-# cv2.waitKey(0)
-# cv2.destroyAllWindows()
-
 # グレースケール化の簡単な方法
 img_gray2 = cv2.imread("src/grapes.jpg", 0)
 cv2.imshow("gray", img_gray2)

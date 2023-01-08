@@ -7,7 +7,7 @@ threshould = 100
 ret, img_th = cv2.threshold(img, threshould, 255, cv2.THRESH_BINARY)
 # ret => 100
 cv2.imshow("img_th", img_th)
-# 閾値が可変
+# 閾値が可変(otsuの方法)
 ret2, img_o = cv2.threshold(img, 0, 255, cv2.THRESH_OTSU)
 # ヒストグラムで可視化
 hist = cv2.calcHist([img], [0], None, [256], [0,256])

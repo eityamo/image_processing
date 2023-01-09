@@ -1,10 +1,10 @@
 import cv2
 img = cv2.imread("src/Lena.jpg", 0)
-cv2.imshow("img", img)
 
 # x方向に微分したSobelフィルターをかける
 img_sobelx = cv2.Sobel(img, cv2.CV_32F, 1, 0, ksize=3)
 img_sobely = cv2.Sobel(img, cv2.CV_32F, 0, 1, ksize=3)
+
 # 絶対値処理
 img_sobelx = cv2.convertScaleAbs(img_sobelx)
 img_sobely = cv2.convertScaleAbs(img_sobely)

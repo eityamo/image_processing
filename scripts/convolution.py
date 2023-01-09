@@ -14,6 +14,7 @@ cv2.imshow("img", img_ke1)
 cv2.imshow("src", img)
 
 kernel2 = np.zeros((3,3))
+# 具体的な要素を書く
 kernel2[0,0] = 1
 kernel2[1,0] = 2
 kernel2[2,0] = 1

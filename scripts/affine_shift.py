@@ -9,6 +9,6 @@ dx, dy = 30, 30
 afn_mat = np.float32([[1,0,dx],[0,1,dy]])
 # アファイン変換を画像に反映
 img_afn = cv2.warpAffine(img, afn_mat, (w,h))
-cv2.imshow("trans", img_afn)
+cv2.imshow("shift", img_afn)
 cv2.waitKey(0)
 cv2.destroyAllWindows()

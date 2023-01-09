@@ -9,14 +9,13 @@ cv2.imshow("src", img)
 img_ga = cv2.GaussianBlur(img, (9,9), 2)
 cv2.imshow("img1", img_ga)
 
-# メディアフィルター(中央値)
+# メディアンフィルター(中央値)
 img_me = cv2.medianBlur(img, 5)
 cv2.imshow("img2", img_me)
 
 # バイラテラルフィルター
 img_bi = cv2.bilateralFilter(img, 20, 30, 30)
 cv2.imshow("img3", img_bi)
-
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()

@@ -9,6 +9,6 @@ dx, dy = 30, 30
 rot_mat = cv2.getRotationMatrix2D((w/2, h/2), 40, 1)
 # アファイン変換を画像に反映
 img_afn = cv2.warpAffine(img, rot_mat, (w,h))
-cv2.imshow("trans", img_afn)
+cv2.imshow("rotation", img_afn)
 cv2.waitKey(0)
 cv2.destroyAllWindows()

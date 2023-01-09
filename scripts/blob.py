@@ -6,6 +6,11 @@ img_g = cv2.imread("src/Blob.png", 0)
 ret, img_bi = cv2.threshold(img_g, 100, 255, cv2.THRESH_BINARY)
 nLabels, labelImage, stats, centroids = cv2.connectedComponentsWithStats(img_bi)
 
+# nlabel 検出したブロブの個数（背景含む）
+# labelImage ラベルのIDが降られている配列
+# stats [最小のX, 最小のY, 幅, 高さ, ブロブの面積]
+# cantroids 重心の座標
+
 # imgのコピー
 img_blob = copy.deepcopy(img)
 h, w = img_g.shape

@@ -17,4 +17,4 @@ img_dst = cv2.inpaint(img, img_bin, 3, cv2.INPAINT_NS)
 cv2.imshow("inpaint", img_dst)
 
 cv2.waitKey(0)
-cv2.destroyAllWindows
+cv2.destroyAllWindows()

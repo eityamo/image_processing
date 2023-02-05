@@ -19,6 +19,8 @@ img_thresh = cv2.threshold(img_binary, threshold, 255, cv2.THRESH_BINARY)[1]
 contours = cv2.findContours(img_thresh, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)[0]
 ## 面積が最大の輪郭を取得
 contour = max(contours, key=lambda x: cv2.contourArea(x))
+print([contour])
+
 ## 輪郭の描画
 # cv2.drawContours(img_raw, contours, -1, color=(255, 255, 255), thickness=2)
 

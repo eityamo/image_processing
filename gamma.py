@@ -12,16 +12,16 @@ def adjust(img, alpha=1.0, beta=0.0):
     # [0, 255] でクリップし、uint8 型にする。
     return np.clip(dst, 0, 255).astype(np.uint8)
 
-alpha1 = [0.2, 0.4, 0.6, 0.8, 1.0, 1.2, 1.4, 1.6, 1.8]
-beta1 = [-100, -75, -50, -25, 25, 50, 75, 100]
+alpha1 = [1.2, 1.4]
+beta1 = [-25, 25, 50]
 
 for i in alpha1:
     for j in beta1:
         # 画像を読み込む。
-        src = cv2.imread("sample.jpg")
+        src = cv2.imread("data/NG (3).jpg")
 
         # コントラスト、明るさを変更する。
-        dst = adjust(src, alpha=i, beta=30.0)
+        dst = adjust(src, alpha=i, beta=j)
         
-        cv2.imwrite(f'data/sample{i}{j}.jpg', dst)
-    
+        cv2.imwrite(f'data/result{j}{i}.jpg', dst)
+
